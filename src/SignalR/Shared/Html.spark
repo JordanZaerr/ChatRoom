@@ -1,0 +1,15 @@
+﻿<html>
+  <head>
+    <title>SignalR</title>
+    ${this.WriteCssTags()}
+  </head>
+  <body>
+    <div id="pageContent">
+      <use:view/>
+    </div>
+    <script src="_content/scripts/jquery-2.1.0.js"/>
+    <script src="_content/scripts/jquery.signalR-2.0.2.js"/>
+    <script src="signalr/hubs"/>
+    ${this.WriteScriptTags()}
+  </body>
+</html>

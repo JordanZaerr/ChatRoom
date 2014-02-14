@@ -1,0 +1,35 @@
+﻿<use master="Html"/>
+# this.Asset("home");
+
+<viewdata model="ChatRoom.Home.Models.HomeViewModel"/>
+
+<div class="header">
+  <Button type="button" class="btn btn-sm btn-info" data-bind="click: createRoom">Create Room</Button>
+  <span data-bind="text: 'Hello ' + name(), visible: name() !== undefined"/>
+  <hr/>
+</div>
+
+<div class="roomNav list-group" data-bind="foreach: rooms">
+    <a class="list-group-item" href="#" 
+       data-bind="text: $data, css: {active: $parent.currentRoom() === $data}, click: $parent.changeRooms"/>
+</div>
+
+<div class="messages">
+    <ul data-bind="foreach: messages">
+    <li data-bind="css:{faint: name === 'Admin'}">
+      <strong data-bind="text: name + ':'"/>
+      <span data-bind="text: message"/>
+    </li>
+  </ul>
+</div>
+
+<div class="controlPanel">
+   <form data-bind="submit: sendMessage">
+     <div class="input-group">
+       <input type="text" class="form-control" data-bind="value: currentMessage">
+         <span class="input-group-btn">
+           <button class="btn btn-default" type="submit">Send</button>
+         </span>
+       </div>
+  </form>
+</div>

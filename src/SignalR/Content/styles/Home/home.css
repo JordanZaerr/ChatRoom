@@ -1,0 +1,34 @@
+﻿.header{
+  margin: 10px 0 0 10px;
+}
+
+.header button {
+  width: 150px;
+}
+
+.header span{
+  margin-left:10px;
+}
+
+.messages {
+  height:250px;
+  overflow-y: auto;
+  border: black solid 1px;
+  margin: 0 10px 0 175px;
+}
+
+.controlPanel {
+  margin: 10px 10px 0 175px;
+}
+
+.roomNav {
+  width: 150px;
+  height: 300px;
+  float:left;
+  margin-left: 10px;
+  overflow-y: auto;
+}
+
+.faint {
+  color: lightgray;
+}
